@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7A3E3BD-88F9-4817-B479-C55C27D0F4AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fr_Main</RootNamespace>
+    <AssemblyName>fr_Main</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>..\..\..\..\..\..\..\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=7.0.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.0.4\lib\net35\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net35\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net35\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlusFree, Version=4.5.3.8, Culture=neutral, PublicKeyToken=85bfa0499e2db48a, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlusFree.4.5.3.8\lib\net40\EPPlusFree.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net461\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.BootstrapIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.BootstrapIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.BoxIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.BoxIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Codicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Codicons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Coolicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Coolicons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Entypo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Entypo.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.EvaIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.EvaIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.FeatherIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.FeatherIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.FileIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.FileIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Fontaudio, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Fontaudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.FontAwesome, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.FontAwesome.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Fontisto, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Fontisto.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.ForkAwesome, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.ForkAwesome.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Ionicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Ionicons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.JamIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.JamIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.MaterialDesign, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.MaterialDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.MaterialLight, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.MaterialLight.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Microns, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Microns.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Modern, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Modern.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Octicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Octicons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.PicolIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.PicolIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.PixelartIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.PixelartIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RadixIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.RadixIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RemixIcon, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.RemixIcon.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RPGAwesome, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.RPGAwesome.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.SimpleIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.SimpleIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Typicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Typicons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Unicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Unicons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.VaadinIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.VaadinIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.WeatherIcons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.WeatherIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Zondicons, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.4.11.0\lib\net46\MahApps.Metro.IconPacks.Zondicons.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=4.3.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.4.3.0\lib\netstandard2.0\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Formats.Asn1, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Formats.Asn1.7.0.0\lib\netstandard2.0\System.Formats.Asn1.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Cng, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Cng.5.0.0\lib\net461\System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Pkcs.7.0.3\lib\netstandard2.0\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.7.0.0\lib\netstandard2.0\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectDatabase_QLNS.cs" />
+    <Compile Include="frm_BD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_BD.Designer.cs">
+      <DependentUpon>frm_BD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DoiMK.Designer.cs">
+      <DependentUpon>frm_DoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_GiamGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_GiamGia.Designer.cs">
+      <DependentUpon>frm_GiamGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HoaDon.Designer.cs">
+      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_KhoiPhucTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_KhoiPhucTK.Designer.cs">
+      <DependentUpon>frm_KhoiPhucTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DangNhap.Designer.cs">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_NhapHang1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_NhapHang1.Designer.cs">
+      <DependentUpon>frm_NhapHang1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShareVar.cs" />
+    <Compile Include="TaiKhoan.cs" />
+    <Compile Include="ThongTinHoaDon.cs" />
+    <Compile Include="UserControls\BH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BH.Designer.cs">
+      <DependentUpon>BH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DH.Designer.cs">
+      <DependentUpon>DH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\NV.Designer.cs">
+      <DependentUpon>NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SP.Designer.cs">
+      <DependentUpon>SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TK.Designer.cs">
+      <DependentUpon>TK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TKE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TKE.Designer.cs">
+      <DependentUpon>TKE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TQ.Designer.cs">
+      <DependentUpon>TQ.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_BD.resx">
+      <DependentUpon>frm_BD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DangNhap.resx">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DoiMK.resx">
+      <DependentUpon>frm_DoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_GiamGia.resx">
+      <DependentUpon>frm_GiamGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HoaDon.resx">
+      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_KhoiPhucTK.resx">
+      <DependentUpon>frm_KhoiPhucTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Main.resx">
+      <DependentUpon>frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_NhapHang1.resx">
+      <DependentUpon>frm_NhapHang1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\BH.resx">
+      <DependentUpon>BH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DH.resx">
+      <DependentUpon>DH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\NV.resx">
+      <DependentUpon>NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SP.resx">
+      <DependentUpon>SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TK.resx">
+      <DependentUpon>TK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TKE.resx">
+      <DependentUpon>TKE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TQ.resx">
+      <DependentUpon>TQ.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image_HRMS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print__1_-removebg-preview.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\multiply-removebg-preview.png" />
+    <None Include="Resources\refresh-removebg-preview.png" />
+    <None Include="Resources\user %283%29.png" />
+    <None Include="Resources\user %282%29.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\order.png" />
+    <None Include="Resources\shopping.png" />
+    <None Include="Resources\view-list.png" />
+    <None Include="Resources\Thiết kế chưa có tên.gif" />
+    <None Include="Resources\output-onlinegiftools-unscreen.gif" />
+    <None Include="Resources\output-onlinegiftools.gif" />
+    <None Include="Resources\eb17d0925c49ef13af6e84cdfeaad079.gif" />
+    <None Include="Resources\4b04332aa9dc431c9e82fdd2186958f2__1_-removebg-preview.png" />
+    <None Include="Resources\log-out-removebg-preview.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\history.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\bye.png" />
+    <None Include="Resources\checked-removebg-preview.png" />
+    <None Include="Resources\a92a0dc3-a90c-4c64-9018-4dd2beec3976.png" />
+    <None Include="Resources\22a61e81-e04e-4ff7-96d2-93343067c16d.png" />
+    <None Include="Resources\d7826b38-8319-447e-96a9-644b93b268e5.png" />
+    <None Include="Resources\f49aec7a-d07e-4d54-a0c7-185f3dd44f1a.png" />
+    <Content Include="Resources\logo_in.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
